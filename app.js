@@ -31,12 +31,12 @@ const createListItem = function (form){
     const newListItem = document.createElement('li');
     
 
-    const nameOfNinja = document.createElement('h1');
-    nameOfNinja.textContent = form.ninjaName.value;
+    const nameOfNinja = document.createElement('h3');
+    nameOfNinja.textContent = `${form.ninjaName.value} has the ability to ${form.ninjaPower.value}`;
     newListItem.appendChild(nameOfNinja);
 
     // const ninjaPower = document.createElement('h2');
-    // ninjaPower.textContent = form.ninja-power.value;
+    // ninjaPower.textContent = form.ninjaPower.value;
     // newListItem.appendChild(ninjaPower);
 
     // const ninjaElement = document.createElement('h3');
