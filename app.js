@@ -3,7 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', handleSubmit);
 })
 
+
+
 // handleSubmit function should do the following:
+const handleSubmit = (event) => {
+    event.preventDefault();
+
+}
 // *take the event parameter
 // * event.preventDefault();
 // 1. create a new li element, store in variable
