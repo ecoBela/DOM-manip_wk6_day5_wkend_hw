@@ -1,7 +1,57 @@
+
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', handleSubmit);
+    console.log("this works");
+    const newItemForm = document.querySelector('#new-item-form');
+    newItemForm.addEventListener('submit', handleSubmitForm);
 });
+
+
+const handleSubmitForm = function (event) {
+    event.preventDefault();
+    const newListItem = createListItem(event.target);
+    const ninjaList = document.querySelector('#listOfNinjas');
+    ninjaList.appendChild(newListItem);
+
+    event.target.reset();
+
+    //1. call createListItem function
+
+    // const listItem = createNinjaListItem(event.target);
+
+// 1a. select ul, store in variable (done)
+//     // 2. appendChild new li element to the ul (done)
+//     const ninjaList = document.querySelector('ul');
+//     ninjaList.appendChild(ninjaListItem);
+
+
+}
+
+
+const createListItem = function (form){
+    const newListItem = document.createElement('li');
+    
+
+    const nameOfNinja = document.createElement('h1');
+    nameOfNinja.textContent = form.ninjaName.value;
+    newListItem.appendChild(nameOfNinja);
+
+    // const ninjaPower = document.createElement('h2');
+    // ninjaPower.textContent = form.ninja-power.value;
+    // newListItem.appendChild(ninjaPower);
+
+    // const ninjaElement = document.createElement('h3');
+    // ninjaElement.textContent = form.element.value;
+    // newListItem.appendChild(ninjaElement);
+
+    return newListItem;
+};
+
+
+
+
+// 3. capture value typed in (same as below?) (done)
+// 4. append text to li element e.g. .textContent(event.target.value?) (done)
+// 5. reset the form with event.target.reset();
 
 
 //createNinjaListItem function should take the form as parameter (done)
@@ -13,56 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
 // Then add text for: 1/ name 2/ power 3/ element
 // Then append 1/ name, 2/ pwoer 3/wlement to newListItem
 
-const createNinjaListItem = (form) => {
-    const newListItem = document.createElement('li');
-
-    const ninjaName = document.createElement('h1');
-    ninjaName.textContent = form.ninja-name.value;
-    newListItem.appendChild(ninjaName);
-
-    const 
 
 
 
-}
-
-
-//handleSubmit function should take (event)
-// newListItem = it should call createNinjaListItem, pass it event.value, and store the whole thing in a variable
-// it should select ul
-// append newListItem to the ul.
-//event.target.reset()
-
-// handleSubmit function should do the following:
-const handleSubmit = (event) => {
-    // *take the event parameter (done)
-    // * event.preventDefault(); (done)
-    event.preventDefault();
+// const createNinjaListItem = function(event){
+//     event.preventDefault();
+//     const ninjaListItem = document.createElement('li');
+//     ninjaListItem.append(event.target.value);
     
-    //1. call readinglist function
-    const ninjaListItem = createNinjaListItem(event.target);
-   
-    // 1a. select ul, store in variable (done)
-    // 2. appendChild new li element to the ul (done)
-    const ninjaList = document.querySelector('ul');
-    ninjaList.appendChild(ninjaListItem);
 
-    // event.target.reset();
-}
 
-const createNinjaListItem = (form) => {
-// 1. create a new li element, store in variable (done) (done)
-    const newListItem = document.createElement('li');
+//     const ninjaList = document.querySelector('#listOfNinjas');
+//     ninjaList.appendChild("ninjaListItem");
+    
+// }
 
-    const ninjaName = document.createElement('h1');
-    ninjaName.textContent = form.ninja-name.value;
-    newListItem.appendChild(ninjaName);
+// const handleSubmit = function (event) {
+//     event.preventDefault();
+//     const newListItem = createNinjaListItem(event.value);
+//     const ninjaList = document.querySelector('ul');
+//     ninjaList.appendChild(newListItem);
+//     //event.target.reset()
+// };
 
-}
+// 
 
 
 
-
-// 3. capture value typed in (same as below?) (done)
-// 4. append text to li element e.g. .textContent(event.target.value?) (done)
-// 5. reset the form with event.target.reset();
