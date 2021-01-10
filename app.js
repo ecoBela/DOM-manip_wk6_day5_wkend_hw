@@ -32,7 +32,8 @@ const createListItem = function (form){
     
 
     const nameOfNinja = document.createElement('h3');
-    nameOfNinja.textContent = `${form.ninjaName.value} has the ability to ${form.ninjaPower.value}`;
+    nameOfNinja.textContent = `${form.ninjaName.value} has the ability to ${form.ninjaPower.value}.
+    This power is controlled by the ${form.powerElement.value} element.`;
     newListItem.appendChild(nameOfNinja);
 
     // const ninjaPower = document.createElement('h2');
@@ -40,7 +41,7 @@ const createListItem = function (form){
     // newListItem.appendChild(ninjaPower);
 
     // const ninjaElement = document.createElement('h3');
-    // ninjaElement.textContent = form.element.value;
+    // ninjaElement.textContent = form.powerElement.value;
     // newListItem.appendChild(ninjaElement);
 
     return newListItem;
