@@ -1,6 +1,8 @@
-// Add event listener to the whole page e.g. ('DOMContentLoaded)
-// Create a variable/object for the form element
-// Add event listener to submit button
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+})
+
 // handleSubmit function should do the following:
 // *take the event parameter
 // * event.preventDefault();
@@ -10,8 +12,3 @@
 // 3. capture value typed in
 // 4. append text to li element e.g. .textContent(event.target.value?)
 // 5. reset the form with event.target.reset();
-
-console.log("JS file is connected")
-document.addEventListener('DOMContentLoaded', () => {
-    
-})
