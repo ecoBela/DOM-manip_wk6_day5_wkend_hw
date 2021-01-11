@@ -1,8 +1,25 @@
 body{
-    background-color: lightblue;
+    background-image: repeating-linear-gradient(to right, lightblue, green);
 }
 
+/* form>label{
+    font-size: 24px;
+} */
+
+form > .input-and-labels{
+    display: block;
+    margin: 20px;
+    font-size: 24px;
+}
+
+
+#submitButton{
+    padding: 15px 38px;
+    background-image: linear-gradient(to right, lightblue, pink);
+    font-size: 20px;
+}
 button{
-    padding: 15px 32px;
+    padding: 15px 20px;
+    background-image: linear-gradient(to right, lightblue, pink);
 
 }
